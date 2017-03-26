@@ -7,7 +7,7 @@
 from __future__ import division
 import pymongo
 from scrapy.exceptions import DropItem
-
+import string
 
 
 class JumiaPipeline(object):
@@ -48,6 +48,16 @@ class NoramalizePipeline(object):
             return item
         else:
             raise DropItem("Missing name in %s" % item)
+
+
+
+# class ConvertToInt(object):
+#     def process_item(self, item, spider):
+#         if item['price']:
+#             print item['price']
+#             print item['name']
+#         else:
+#             raise DropItem("No price field in %s" % item)
 
 
 class JumiaOffCalcPipeline(object):
@@ -120,4 +130,3 @@ class UpdatePipeline():
         self.db[self.collection_name].insert(dict(item))
         # Select database based on running spider and perform comparison
         return item
-        

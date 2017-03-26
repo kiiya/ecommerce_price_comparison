@@ -8,12 +8,21 @@
 import scrapy
 
 
-class BargainItem(scrapy.Item):
+class JumiaItem(scrapy.Item):
     name = scrapy.Field()
     brand = scrapy.Field()
     product_url = scrapy.Field()
     product_image = scrapy.Field()
-    # new_and_old_price = scrapy.Field()
+    price = scrapy.Field()
+    product_discount = scrapy.Field()
+    store = scrapy.Field()
+
+
+class KilimallItem(scrapy.Item):
+    name = scrapy.Field()
+    brand = scrapy.Field()
+    product_url = scrapy.Field()
+    product_image = scrapy.Field()
     price = scrapy.Field()
     product_discount = scrapy.Field()
     store = scrapy.Field()
