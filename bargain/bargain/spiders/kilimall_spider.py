@@ -18,29 +18,58 @@ class KiliMallSpider(scrapy.Spider):
                 # 'bargain.pipelines.KilimallPipeline':700,
                 # 'bargain.pipelines.NoramalizePipeline': 300
                 # 'bargain.pipelines.ConvertToInt': 300
-                # 'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 500
+                # 'scrapyelasticsearch.scrapyelasticsearch\
+                # .ElasticSearchPipeline': 500
             }
     }
 
     def parse(self, response):
+        item = KilimallItem()
         for prod in response.css("li.item"):
-            item = KilimallItem()
-            item['name'] = ''.join(prod.css("div.goods-content h3.goods-name a::text").extract())
-            item['product_url'] = ''.join(prod.css("div.goods-content h3.goods-name a::attr(href)").extract())
-            item['product_image'] = ''.join(prod.css("div.goods-content div.goods-pic a img::attr(data-src)").extract())
-            item['price'] = float(''.join(prod.css("div.goods-content div.goods-info div.goods-price em.sale-price::text").extract()).replace(" ", "").replace(",","").replace("KSh",""))
-            item['product_discount'] = ''.join(prod.css("div.goods-content div.goods-info div.goods-discount::text").extract()).replace('OFF','')
-            item['store'] = 'kilimall'
+            item['name'] = ''.join(prod.css("div.goods-content h3.goods-name\
+                                            a::text").extract())
 
-            request = scrapy.Request(''.join(prod.css("div.goods-content h3.goods-name a::attr(href)").extract()), callback=self.parse_brand)
+            item['product_url'] = ''.join(
+                prod.css("div.goods-content h3.goods-name a::attr(href)")
+                .extract())
+
+            item['product_image'] = ''.join(
+                prod.css(
+                    "div.goods-content div.goods-pic a img::attr(data-src)"
+                ).extract())
+
+            item['price'] = float(
+                ''.join(
+                    prod.css("div.goods-content div.goods-info\
+                                 div.goods-price em.sale-price::text")
+                    .extract()
+                )
+                .replace(" ", "")
+                .replace(",", "")
+                .replace("KSh", "")
+            )
+
+            item['product_discount'] = ''.join(
+                prod.css("div.goods-content div.goods-info \
+                         div.goods-discount::text").extract()).replace('OFF',
+                                                                       '')
+
+            item['store'] = 'kilimall'
+            request = scrapy.Request(''.join(
+                prod.css(
+                    "div.goods-content h3.goods-name a::attr(href)"
+                ).extract()),
+                callback=self.parse_brand)
+
+            next_page = ''.join(response.xpath("//*[text()='Next']/parent::*/@href\
+                                               ").extract())
+            if next_page is not None:
+                next_page = response.urljoin(next_page)
+                print next_page
+                yield scrapy.Request(next_page, callback=self.parse)
+
             request.meta['item'] = item
             yield request
-
-        next_page = ''.join(response.xpath("//*[text()='Next']/parent::*/@href").extract())
-        if next_page is not None:
-            next_page = response.urljoin(next_page)
-            print next_page
-            yield scrapy.Request(next_page, callback=self.parse)
 
     def parse_brand(self, response):
         item = response.meta['item']
