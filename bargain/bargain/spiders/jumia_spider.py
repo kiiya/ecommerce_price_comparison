@@ -16,7 +16,7 @@ class JumiaSpider(scrapy.Spider):
             {
                 # 'bargain.pipelines.JumiaPipeline':700,
                 # 'bargain.pipelines.NoramalizePipeline': 300,
-                # 'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 500
+                'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 500
                 # 'bargain.pipelines.JumiaOffCalcPipeline': 300,
                 # 'bargain.pipelines.UpdatePipeline': 300
             }

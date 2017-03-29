@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 
 # Define your item pipelines here
@@ -8,6 +9,7 @@ from __future__ import division
 import pymongo
 from scrapy.exceptions import DropItem
 import string
+import re
 
 
 class JumiaPipeline(object):
@@ -50,14 +52,19 @@ class NoramalizePipeline(object):
             raise DropItem("Missing name in %s" % item)
 
 
-
-# class ConvertToInt(object):
-#     def process_item(self, item, spider):
-#         if item['price']:
-#             print item['price']
-#             print item['name']
-#         else:
-#             raise DropItem("No price field in %s" % item)
+class FixKilimallBrand(object):
+    def process_item(self, item, spider):
+        if item['brand']:
+            details = item['brand']
+            r = re.compile(".*Brand:")
+            new_list = filter(r.match, details)
+            brand = ''.join(new_list).replace("Brand: ", "")
+            item['brand'] = brand
+            if item['brand'] == "":
+                item['brand'] = 'Generic'
+            return item
+        else:
+            raise DropItem("Error fixing %s brand" % item)
 
 
 class JumiaOffCalcPipeline(object):
