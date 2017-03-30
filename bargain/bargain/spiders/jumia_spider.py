@@ -8,7 +8,9 @@ class JumiaSpider(scrapy.Spider):
     name = 'jumia'
 
     start_urls = [
-        'https://www.jumia.co.ke/mobile-phones/'
+        'https://www.jumia.co.ke/mobile-phones/',
+        'https://www.jumia.co.ke/computers/',
+        'https://www.jumia.co.ke/video-audio/'
     ]
 
     custom_settings = {
@@ -16,7 +18,7 @@ class JumiaSpider(scrapy.Spider):
             {
                 # 'bargain.pipelines.JumiaPipeline':700,
                 # 'bargain.pipelines.NoramalizePipeline': 300,
-                'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 500
+                # 'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 500
                 # 'bargain.pipelines.JumiaOffCalcPipeline': 300,
                 # 'bargain.pipelines.UpdatePipeline': 300
             }

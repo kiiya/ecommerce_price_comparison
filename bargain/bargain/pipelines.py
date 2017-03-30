@@ -70,7 +70,8 @@ class FixKilimallBrand(object):
 class JumiaOffCalcPipeline(object):
     def process_item(self, item, spider):
         if item['product_discount']:
-            item['product_discount'] = item['product_discount'].replace('-', '')
+            item['product_discount'] = item['product_discount'].replace('-',
+                                                                        '')
             item['product_discount'] = item['product_discount'] + ' OFF'
             return item
         else:
