@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Bargin price comparison</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ message }}</h1>
+      <ul>
+        <li v-for="product in products">
+          {{ product.brand }} : {{ product.store }}
+        </li>
+      </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+      var app = new Vue({
+        el: '#app',
+        data: {
+          message: 'Bargain site',
+          products: []
+        },
+        mounted() {
+          axios.get('http://127.0.0.1:5000/search?q=infinix').then(response => this.products = response.data);
+        }
+      })
+    </script>
+  </body>
+</html>
