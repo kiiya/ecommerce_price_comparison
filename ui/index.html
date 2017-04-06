@@ -7,7 +7,8 @@
       <h1>{{ message }}</h1>
       <ul>
         <li v-for="product in products">
-          {{ product.brand }} : {{ product.store }}
+          {{ product.name }} : {{ product.brand }} : {{ product.store }} <img :src="product.product_image" alt="" width="50px">
+          Ksh {{ product.price }} <a :href="product.product_url">Get Item</a>
         </li>
       </ul>
     </div>
@@ -22,7 +23,7 @@
           products: []
         },
         mounted() {
-          axios.get('http://127.0.0.1:5000/search?q=infinix').then(response => this.products = response.data);
+          axios.get('http://127.0.0.1:5000/search?q=iphone').then(response => this.products = response.data);
         }
       })
     </script>

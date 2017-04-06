@@ -15,6 +15,7 @@ class JumiaItem(scrapy.Item):
     product_image = scrapy.Field()
     price = scrapy.Field()
     product_discount = scrapy.Field()
+    category = scrapy.Field()
     store = scrapy.Field()
 
 
@@ -25,4 +26,5 @@ class KilimallItem(scrapy.Item):
     product_image = scrapy.Field()
     price = scrapy.Field()
     product_discount = scrapy.Field()
+    category = scrapy.Field()
     store = scrapy.Field()

@@ -2,15 +2,14 @@
 import scrapy
 import re
 from bargain.items import KilimallItem
+from bargain import settings
 
 
 class KiliMallSpider(scrapy.Spider):
     """Spider entry point."""
     name = 'kilimall'
 
-    start_urls = [
-        'http://www.kilimall.co.ke/mobile-phones/'
-    ]
+    start_urls = ['http://www.kilimall.co.ke/%s' % category for category in settings.KILIMALL_CATEGORIES]
 
     custom_settings = {
         'ITEM_PIPELINES':
@@ -43,6 +42,7 @@ class KiliMallSpider(scrapy.Spider):
             item['product_discount'] = ''.join(prod.css("div.goods-content\
                                                         div.goods-info\
                                                         div.goods-discount::text").extract()).replace('OFF', '')
+            item['category'] = next(category for category in settings.KILIMALL_CATEGORIES if category in response.url)
             item['store'] = 'kilimall'
 
             request = scrapy.Request(''.join(prod.css("div.goods-content\

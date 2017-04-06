@@ -21,6 +21,8 @@ NEWSPIDER_MODULE = 'bargain.spiders'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
+JUMIA_CATEGORIES = ['mobile-phones', 'computers', 'video-audio']
+KILIMALL_CATEGORIES = ['mobile-phones', 'computers-tablets', 'tvs-audio-video']
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
@@ -93,7 +95,7 @@ ROBOTSTXT_OBEY = True
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 ELASTICSEARCH_SERVERS = ['localhost']
-ELASTICSEARCH_INDEX = 'api_index'
-ELASTICSEARCH_INDEX_DATE_FORMAT = '%Y-%m'
+ELASTICSEARCH_INDEX = 'bargain'
+ELASTICSEARCH_INDEX_DATE_FORMAT = '%m'
 ELASTICSEARCH_TYPE = 'product'
 ELASTICSEARCH_UNIQ_KEY = 'product_url'  # Custom uniqe key
