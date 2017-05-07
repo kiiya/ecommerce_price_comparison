@@ -1,0 +1,25 @@
+[2017-03-31T23:09:12,961][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-03-31T23:09:13,617][INFO ][o.e.e.NodeEnvironment    ] [WUVwuT_] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [307.1gb], net total_space [450.5gb], spins? [possibly], types [ext4]
+[2017-03-31T23:09:13,618][INFO ][o.e.e.NodeEnvironment    ] [WUVwuT_] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-03-31T23:09:13,948][INFO ][o.e.n.Node               ] node name [WUVwuT_] derived from node ID [WUVwuT_fRK6qrdPyxHShMg]; set [node.name] to override
+[2017-03-31T23:09:13,969][INFO ][o.e.n.Node               ] version[5.2.2], pid[2478], build[f9d9b74/2017-02-24T17:26:45.835Z], OS[Linux/4.4.0-71-generic/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_121/25.121-b13]
+[2017-03-31T23:09:15,280][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [aggs-matrix-stats]
+[2017-03-31T23:09:15,280][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [ingest-common]
+[2017-03-31T23:09:15,280][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-expression]
+[2017-03-31T23:09:15,280][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-groovy]
+[2017-03-31T23:09:15,281][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-mustache]
+[2017-03-31T23:09:15,281][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-painless]
+[2017-03-31T23:09:15,281][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [percolator]
+[2017-03-31T23:09:15,281][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [reindex]
+[2017-03-31T23:09:15,281][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [transport-netty3]
+[2017-03-31T23:09:15,281][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [transport-netty4]
+[2017-03-31T23:09:15,282][INFO ][o.e.p.PluginsService     ] [WUVwuT_] no plugins loaded
+[2017-03-31T23:09:18,549][INFO ][o.e.n.Node               ] initialized
+[2017-03-31T23:09:18,550][INFO ][o.e.n.Node               ] [WUVwuT_] starting ...
+[2017-03-31T23:09:18,988][INFO ][o.e.t.TransportService   ] [WUVwuT_] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2017-03-31T23:09:18,997][WARN ][o.e.b.BootstrapChecks    ] [WUVwuT_] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2017-03-31T23:09:22,137][INFO ][o.e.c.s.ClusterService   ] [WUVwuT_] new_master {WUVwuT_}{WUVwuT_fRK6qrdPyxHShMg}{k7Zsk4g7RFmrT_VBkKONLw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-03-31T23:09:22,205][INFO ][o.e.h.HttpServer         ] [WUVwuT_] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
+[2017-03-31T23:09:22,206][INFO ][o.e.n.Node               ] [WUVwuT_] started
+[2017-03-31T23:09:23,673][INFO ][o.e.g.GatewayService     ] [WUVwuT_] recovered [5] indices into cluster_state
+[2017-03-31T23:09:32,453][INFO ][o.e.c.r.a.AllocationService] [WUVwuT_] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[scrapy-2017-03][0]] ...]).

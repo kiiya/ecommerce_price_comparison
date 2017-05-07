@@ -1,0 +1,137 @@
+[2017-03-21T10:01:50,907][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-03-21T10:01:51,126][INFO ][o.e.e.NodeEnvironment    ] [WUVwuT_] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [311.2gb], net total_space [450.5gb], spins? [possibly], types [ext4]
+[2017-03-21T10:01:51,127][INFO ][o.e.e.NodeEnvironment    ] [WUVwuT_] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-03-21T10:01:51,128][INFO ][o.e.n.Node               ] node name [WUVwuT_] derived from node ID [WUVwuT_fRK6qrdPyxHShMg]; set [node.name] to override
+[2017-03-21T10:01:51,158][INFO ][o.e.n.Node               ] version[5.2.2], pid[7535], build[f9d9b74/2017-02-24T17:26:45.835Z], OS[Linux/4.4.0-66-generic/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_121/25.121-b13]
+[2017-03-21T10:01:51,994][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [aggs-matrix-stats]
+[2017-03-21T10:01:51,994][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [ingest-common]
+[2017-03-21T10:01:51,994][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-expression]
+[2017-03-21T10:01:51,995][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-groovy]
+[2017-03-21T10:01:51,995][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-mustache]
+[2017-03-21T10:01:51,995][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-painless]
+[2017-03-21T10:01:51,995][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [percolator]
+[2017-03-21T10:01:51,995][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [reindex]
+[2017-03-21T10:01:51,995][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [transport-netty3]
+[2017-03-21T10:01:51,995][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [transport-netty4]
+[2017-03-21T10:01:51,995][INFO ][o.e.p.PluginsService     ] [WUVwuT_] no plugins loaded
+[2017-03-21T10:01:53,608][INFO ][o.e.n.Node               ] initialized
+[2017-03-21T10:01:53,608][INFO ][o.e.n.Node               ] [WUVwuT_] starting ...
+[2017-03-21T10:01:53,837][INFO ][o.e.t.TransportService   ] [WUVwuT_] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2017-03-21T10:01:53,842][WARN ][o.e.b.BootstrapChecks    ] [WUVwuT_] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2017-03-21T10:01:56,956][INFO ][o.e.c.s.ClusterService   ] [WUVwuT_] new_master {WUVwuT_}{WUVwuT_fRK6qrdPyxHShMg}{2wMRdQLHQMmzQx_eA-WjlA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-03-21T10:01:56,993][INFO ][o.e.h.HttpServer         ] [WUVwuT_] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2017-03-21T10:01:57,001][INFO ][o.e.n.Node               ] [WUVwuT_] started
+[2017-03-21T10:01:57,066][INFO ][o.e.g.GatewayService     ] [WUVwuT_] recovered [0] indices into cluster_state
+[2017-03-21T10:31:40,309][INFO ][o.e.c.m.MetaDataCreateIndexService] [WUVwuT_] [scrapy-2017-03] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
+[2017-03-21T10:31:41,972][INFO ][o.e.c.m.MetaDataMappingService] [WUVwuT_] [scrapy-2017-03/0b7IBkRNQW-5ZjDKVCA0Zg] create_mapping [items]
+[2017-03-21T12:40:30,843][INFO ][o.e.n.Node               ] [WUVwuT_] stopping ...
+[2017-03-21T12:40:31,114][INFO ][o.e.n.Node               ] [WUVwuT_] stopped
+[2017-03-21T12:40:31,114][INFO ][o.e.n.Node               ] [WUVwuT_] closing ...
+[2017-03-21T12:40:31,143][INFO ][o.e.n.Node               ] [WUVwuT_] closed
+[2017-03-21T12:40:37,731][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-03-21T12:40:38,125][INFO ][o.e.e.NodeEnvironment    ] [WUVwuT_] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [311gb], net total_space [450.5gb], spins? [possibly], types [ext4]
+[2017-03-21T12:40:38,126][INFO ][o.e.e.NodeEnvironment    ] [WUVwuT_] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-03-21T12:40:38,169][INFO ][o.e.n.Node               ] node name [WUVwuT_] derived from node ID [WUVwuT_fRK6qrdPyxHShMg]; set [node.name] to override
+[2017-03-21T12:40:38,193][INFO ][o.e.n.Node               ] version[5.2.2], pid[25328], build[f9d9b74/2017-02-24T17:26:45.835Z], OS[Linux/4.4.0-66-generic/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_121/25.121-b13]
+[2017-03-21T12:40:39,562][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [aggs-matrix-stats]
+[2017-03-21T12:40:39,562][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [ingest-common]
+[2017-03-21T12:40:39,563][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-expression]
+[2017-03-21T12:40:39,563][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-groovy]
+[2017-03-21T12:40:39,563][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-mustache]
+[2017-03-21T12:40:39,563][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-painless]
+[2017-03-21T12:40:39,563][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [percolator]
+[2017-03-21T12:40:39,563][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [reindex]
+[2017-03-21T12:40:39,563][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [transport-netty3]
+[2017-03-21T12:40:39,563][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [transport-netty4]
+[2017-03-21T12:40:39,564][INFO ][o.e.p.PluginsService     ] [WUVwuT_] no plugins loaded
+[2017-03-21T12:40:42,599][INFO ][o.e.n.Node               ] initialized
+[2017-03-21T12:40:42,602][INFO ][o.e.n.Node               ] [WUVwuT_] starting ...
+[2017-03-21T12:40:43,152][INFO ][o.e.t.TransportService   ] [WUVwuT_] publish_address {192.168.88.60:9300}, bound_addresses {192.168.88.60:9300}
+[2017-03-21T12:40:43,157][INFO ][o.e.b.BootstrapChecks    ] [WUVwuT_] bound or publishing to a non-loopback or non-link-local address, enforcing bootstrap checks
+[2017-03-21T12:40:43,165][ERROR][o.e.b.Bootstrap          ] [WUVwuT_] node validation exception
+bootstrap checks failed
+max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2017-03-21T12:40:43,168][INFO ][o.e.n.Node               ] [WUVwuT_] stopping ...
+[2017-03-21T12:40:43,294][INFO ][o.e.n.Node               ] [WUVwuT_] stopped
+[2017-03-21T12:40:43,296][INFO ][o.e.n.Node               ] [WUVwuT_] closing ...
+[2017-03-21T12:40:43,310][INFO ][o.e.n.Node               ] [WUVwuT_] closed
+[2017-03-21T12:40:54,093][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-03-21T12:40:54,214][INFO ][o.e.e.NodeEnvironment    ] [WUVwuT_] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [311gb], net total_space [450.5gb], spins? [possibly], types [ext4]
+[2017-03-21T12:40:54,214][INFO ][o.e.e.NodeEnvironment    ] [WUVwuT_] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-03-21T12:40:54,224][INFO ][o.e.n.Node               ] node name [WUVwuT_] derived from node ID [WUVwuT_fRK6qrdPyxHShMg]; set [node.name] to override
+[2017-03-21T12:40:54,226][INFO ][o.e.n.Node               ] version[5.2.2], pid[25482], build[f9d9b74/2017-02-24T17:26:45.835Z], OS[Linux/4.4.0-66-generic/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_121/25.121-b13]
+[2017-03-21T12:40:54,861][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [aggs-matrix-stats]
+[2017-03-21T12:40:54,861][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [ingest-common]
+[2017-03-21T12:40:54,861][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-expression]
+[2017-03-21T12:40:54,862][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-groovy]
+[2017-03-21T12:40:54,862][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-mustache]
+[2017-03-21T12:40:54,862][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-painless]
+[2017-03-21T12:40:54,862][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [percolator]
+[2017-03-21T12:40:54,862][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [reindex]
+[2017-03-21T12:40:54,862][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [transport-netty3]
+[2017-03-21T12:40:54,863][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [transport-netty4]
+[2017-03-21T12:40:54,865][INFO ][o.e.p.PluginsService     ] [WUVwuT_] no plugins loaded
+[2017-03-21T12:40:56,255][INFO ][o.e.n.Node               ] initialized
+[2017-03-21T12:40:56,255][INFO ][o.e.n.Node               ] [WUVwuT_] starting ...
+[2017-03-21T12:40:56,349][INFO ][o.e.t.TransportService   ] [WUVwuT_] publish_address {192.168.88.60:9300}, bound_addresses {192.168.88.60:9300}
+[2017-03-21T12:40:56,353][INFO ][o.e.b.BootstrapChecks    ] [WUVwuT_] bound or publishing to a non-loopback or non-link-local address, enforcing bootstrap checks
+[2017-03-21T12:40:56,356][ERROR][o.e.b.Bootstrap          ] [WUVwuT_] node validation exception
+bootstrap checks failed
+max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2017-03-21T12:40:56,359][INFO ][o.e.n.Node               ] [WUVwuT_] stopping ...
+[2017-03-21T12:40:56,416][INFO ][o.e.n.Node               ] [WUVwuT_] stopped
+[2017-03-21T12:40:56,416][INFO ][o.e.n.Node               ] [WUVwuT_] closing ...
+[2017-03-21T12:40:56,423][INFO ][o.e.n.Node               ] [WUVwuT_] closed
+[2017-03-21T13:11:27,443][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-03-21T13:11:27,562][INFO ][o.e.e.NodeEnvironment    ] [WUVwuT_] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [311gb], net total_space [450.5gb], spins? [possibly], types [ext4]
+[2017-03-21T13:11:27,563][INFO ][o.e.e.NodeEnvironment    ] [WUVwuT_] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-03-21T13:11:27,574][INFO ][o.e.n.Node               ] node name [WUVwuT_] derived from node ID [WUVwuT_fRK6qrdPyxHShMg]; set [node.name] to override
+[2017-03-21T13:11:27,577][INFO ][o.e.n.Node               ] version[5.2.2], pid[26737], build[f9d9b74/2017-02-24T17:26:45.835Z], OS[Linux/4.4.0-66-generic/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_121/25.121-b13]
+[2017-03-21T13:11:28,233][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [aggs-matrix-stats]
+[2017-03-21T13:11:28,233][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [ingest-common]
+[2017-03-21T13:11:28,233][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-expression]
+[2017-03-21T13:11:28,233][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-groovy]
+[2017-03-21T13:11:28,234][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-mustache]
+[2017-03-21T13:11:28,234][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-painless]
+[2017-03-21T13:11:28,234][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [percolator]
+[2017-03-21T13:11:28,234][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [reindex]
+[2017-03-21T13:11:28,234][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [transport-netty3]
+[2017-03-21T13:11:28,234][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [transport-netty4]
+[2017-03-21T13:11:28,235][INFO ][o.e.p.PluginsService     ] [WUVwuT_] no plugins loaded
+[2017-03-21T13:11:29,717][INFO ][o.e.n.Node               ] initialized
+[2017-03-21T13:11:29,717][INFO ][o.e.n.Node               ] [WUVwuT_] starting ...
+[2017-03-21T13:11:29,837][INFO ][o.e.t.TransportService   ] [WUVwuT_] publish_address {192.168.88.60:9300}, bound_addresses {192.168.88.60:9300}
+[2017-03-21T13:11:29,841][INFO ][o.e.b.BootstrapChecks    ] [WUVwuT_] bound or publishing to a non-loopback or non-link-local address, enforcing bootstrap checks
+[2017-03-21T13:11:29,845][ERROR][o.e.b.Bootstrap          ] [WUVwuT_] node validation exception
+bootstrap checks failed
+max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2017-03-21T13:11:29,853][INFO ][o.e.n.Node               ] [WUVwuT_] stopping ...
+[2017-03-21T13:11:29,984][INFO ][o.e.n.Node               ] [WUVwuT_] stopped
+[2017-03-21T13:11:29,984][INFO ][o.e.n.Node               ] [WUVwuT_] closing ...
+[2017-03-21T13:11:29,991][INFO ][o.e.n.Node               ] [WUVwuT_] closed
+[2017-03-21T13:30:48,992][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-03-21T13:30:49,167][INFO ][o.e.e.NodeEnvironment    ] [WUVwuT_] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [311gb], net total_space [450.5gb], spins? [possibly], types [ext4]
+[2017-03-21T13:30:49,168][INFO ][o.e.e.NodeEnvironment    ] [WUVwuT_] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-03-21T13:30:49,180][INFO ][o.e.n.Node               ] node name [WUVwuT_] derived from node ID [WUVwuT_fRK6qrdPyxHShMg]; set [node.name] to override
+[2017-03-21T13:30:49,183][INFO ][o.e.n.Node               ] version[5.2.2], pid[28117], build[f9d9b74/2017-02-24T17:26:45.835Z], OS[Linux/4.4.0-66-generic/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_121/25.121-b13]
+[2017-03-21T13:30:49,833][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [aggs-matrix-stats]
+[2017-03-21T13:30:49,833][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [ingest-common]
+[2017-03-21T13:30:49,834][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-expression]
+[2017-03-21T13:30:49,834][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-groovy]
+[2017-03-21T13:30:49,834][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-mustache]
+[2017-03-21T13:30:49,834][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [lang-painless]
+[2017-03-21T13:30:49,834][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [percolator]
+[2017-03-21T13:30:49,834][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [reindex]
+[2017-03-21T13:30:49,834][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [transport-netty3]
+[2017-03-21T13:30:49,835][INFO ][o.e.p.PluginsService     ] [WUVwuT_] loaded module [transport-netty4]
+[2017-03-21T13:30:49,837][INFO ][o.e.p.PluginsService     ] [WUVwuT_] no plugins loaded
+[2017-03-21T13:30:51,321][INFO ][o.e.n.Node               ] initialized
+[2017-03-21T13:30:51,321][INFO ][o.e.n.Node               ] [WUVwuT_] starting ...
+[2017-03-21T13:30:51,438][INFO ][o.e.t.TransportService   ] [WUVwuT_] publish_address {192.168.88.60:9300}, bound_addresses {192.168.88.60:9300}
+[2017-03-21T13:30:51,445][INFO ][o.e.b.BootstrapChecks    ] [WUVwuT_] bound or publishing to a non-loopback or non-link-local address, enforcing bootstrap checks
+[2017-03-21T13:30:54,604][INFO ][o.e.c.s.ClusterService   ] [WUVwuT_] new_master {WUVwuT_}{WUVwuT_fRK6qrdPyxHShMg}{Y0DxwGINQVSJSosYef21Rg}{192.168.88.60}{192.168.88.60:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-03-21T13:30:54,646][INFO ][o.e.h.HttpServer         ] [WUVwuT_] publish_address {192.168.88.60:9200}, bound_addresses {192.168.88.60:9200}
+[2017-03-21T13:30:54,646][INFO ][o.e.n.Node               ] [WUVwuT_] started
+[2017-03-21T13:30:55,185][INFO ][o.e.g.GatewayService     ] [WUVwuT_] recovered [1] indices into cluster_state
+[2017-03-21T13:30:56,595][INFO ][o.e.c.r.a.AllocationService] [WUVwuT_] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[scrapy-2017-03][2]] ...]).
+                                                                                                                                                                                                                                                                                                                                

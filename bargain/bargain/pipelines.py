@@ -84,40 +84,43 @@ class JumiaOffCalcPipeline(object):
 
 
 class JumiaAffiliatePipeline(object):
+    def __init__(self):
+        self.browser = webdriver.Chrome()
+        self.browser.get('https://www.jumia.com/affiliate-program/sign-in.php')
+
+        username_input = self.browser.find_element_by_id('username')
+        pass_input = self.browser.find_element_by_id('password')
+
+        username_input.clear()
+        username_input.send_keys('kiiyaerick@gmail.com')
+
+        pass_input.clear()
+        pass_input.send_keys('16221992Jumia')
+
+        self.browser.find_element_by_xpath("//*[@id='sbmt-btn']").click()
+
+    def close_spider(self, spider):
+        self.browser.quit()
+
     def process_item(self, item, spider):
         if item['product_url']:
 
-            options = webdriver.ChromeOptions()
-            options.add_argument("user-data-dir=/home/kiiya/.config/google-chrome/Default")
-            browser = webdriver.Chrome(chrome_options=options)
-            browser.get('https://www.jumia.com/affiliate-program/sign-in.php')
-
-            # username_input = browser.find_element_by_id('username')
-            # pass_input = browser.find_element_by_id('password')
-
-            # username_input.clear()
-            # username_input.send_keys('kiiyaerick@gmail.com')
-
-            # pass_input.clear()
-            # pass_input.send_keys('16221992Jumia')
-
-            browser.find_element_by_xpath("//*[@id='sbmt-btn']").click();
-            browser.get('https://www.jumia.com/affiliate-program/home.php?page=deeplink_generator')
+            self.browser.get('https://www.jumia.com/affiliate-program/home.php?page=deeplink_generator')
 
             # Get dropdown
-            offer_select = Select(browser.find_element_by_id('offer'))
+            offer_select = Select(self.browser.find_element_by_id('offer'))
             offer_select.select_by_visible_text('Jumia Kenya')
 
             # get url field
-            url_input = browser.find_element_by_id('url')
+            url_input = self.browser.find_element_by_id('url')
             url_input.clear()
-            url_input.send_keys('https://www.jumia.co.ke/my-leadder-ld40t01-40-led-tv-black-274352.html')
+            url_input.send_keys(item['product_url'])
 
             # Get final url
-            final_url_element = browser.find_element_by_id('final-url')
+            final_url_element = self.browser.find_element_by_id('final-url')
             url = final_url_element.get_attribute("value")
+
             item['product_url'] = url
             return item
         else:
             raise DropItem("I cannot find that field in item %s" % item)
-

@@ -1,0 +1,2 @@
+[2017-04-01T08:17:47,296][INFO ][o.e.c.m.MetaDataCreateIndexService] [WUVwuT_] [bargain-04] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
+[2017-04-01T08:17:48,962][INFO ][o.e.c.m.MetaDataMappingService] [WUVwuT_] [bargain-04/MxtYhcnIT_ufZOQRcDMVJw] create_mapping [product]

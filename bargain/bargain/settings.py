@@ -95,7 +95,7 @@ KILIMALL_CATEGORIES = ['mobile-phones', 'computers-tablets', 'tvs-audio-video']
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 ELASTICSEARCH_SERVERS = ['localhost']
-ELASTICSEARCH_INDEX = 'bargain'
+ELASTICSEARCH_INDEX = 'final'
 ELASTICSEARCH_INDEX_DATE_FORMAT = '%m'
 ELASTICSEARCH_TYPE = 'product'
 ELASTICSEARCH_UNIQ_KEY = 'product_url'  # Custom uniqe key
