@@ -6,46 +6,53 @@ import NavBar from './components/Navbar';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+          query: 'infinix',
+        }
     }
 
     componentWillMount() {
-        var query = 'iphone 6s 64gb';
+        var query = this.state.query;
         var url = 'http://127.0.0.1:5000/search?q=' + query;
         Request.get(url).then((response) => {
             this.setState({products: response.body})
         });
     }
 
+    getQuery(searchQuery) {
+      this.setState({
+        query: 'cubot'
+      })
+    }
+
     render() {
-        console.log("Products: ", this.state.products);
-
-        var products = _.map(this.state.products, (products) => {
-            return (
-              <li>
-                <div className="product">
-                  <div className="product-store">
-                    { products.store == 'jumia' ? <img src="imgs/jumia.png" /> : <img src="http://image-s3.kilimall.co.ke/shop/common/05466175557864071.png" /> }
-                  </div>
-                  <div className="product-image">
-                    <a href={ products.product_url }><img src={products.product_image} alt="something"/></a>
-                  </div>
-                  <div className="product-details">
-                    <h3>{ products.name }</h3>
-                    <span>KSh { products.price }</span>
-                  </div>
-                  <div className="product-footer">
-                    <a>Buy Now</a>
-                  </div>
-                </div>
-              </li>
-            )
-        });
-
+      var products = _.map(this.state.products, (products) => {
         return (
-            <div className="App">
-                  <NavBar />
-                  <ul>{products}</ul>
+          <li className="col-xs-12 col-sm-8 col-md-3 col-lg-2">
+            <div className="product">
+              <img src={products.product_image} />
+              <div className="product-store">
+                { products.store == 'jumia' ? <img src="imgs/jumia.png" alt=""/> : <img src="http://image-s3.kilimall.co.ke/shop/common/05466175557864071.png" alt=""/>}
+              </div>
+              <div className="product-details">
+                <h3>{products.name}</h3>
+                <span>KSh {products.price}</span>
+              </div>
+              <div className="product-footer">
+                <a href="">Buy Now</a>
+                <a href="">Compare</a>
+              </div>
+            </div>
+          </li>
+        );
+      });
+
+      return (
+            <div><NavBar />
+                  <div className="app">
+
+                    <ul className="row">{products}</ul>
+                  </div>
             </div>
         );
     }
